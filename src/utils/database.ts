@@ -1,7 +1,7 @@
 import mongoose from "mongoose";    
 import env from "./env";
 
-export default const connect = async () => {
+export const connect = async () => {
     await mongoose.connect(env.DATABASE, {
         dbName: 'Alone'
     });
