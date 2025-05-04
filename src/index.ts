@@ -13,6 +13,12 @@ export async function init() {
         app.use(bodyParser.json());
         app.use('/api', router)
 
+        app.get('/', (req, res)=> {
+            res.status(200).json({
+                massage: "server is running"
+            })
+        })
+
         app.listen(env.PORT, () => {
             console.log(env.PORT)
             console.log(db);
