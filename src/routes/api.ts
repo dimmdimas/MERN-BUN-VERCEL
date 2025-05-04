@@ -4,7 +4,7 @@ import authMiddleware from '../middleware/auth.middleware';
 
 const router = Router();
 
-router.get('/', (req, res) => {
+router.get('/tes', (req, res) => {
     res.status(200).json({
         massage: Bun.env.PORT
     })
