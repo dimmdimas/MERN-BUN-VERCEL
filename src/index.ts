@@ -1,7 +1,7 @@
 import bodyParser from 'body-parser';
 import express from 'express'
-import { connect } from './utils/database';
 import router from './routes/api';
+import connect from './utils/database';
 
 
 export async function init() {
