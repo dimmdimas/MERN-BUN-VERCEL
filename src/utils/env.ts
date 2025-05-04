@@ -1,5 +1,10 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 export default {
-    SECRET: Bun.env.SECRET || "",
-    DATABASE: Bun.env.DATABASE_URL || ""
-}
+    PORT: process.env.PORT || "",
+    DATABASE: process.env.DATABASE || "",
+    SECRET: process.env.SECRET || ""
+};
 

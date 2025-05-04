@@ -2,6 +2,7 @@ import bodyParser from 'body-parser';
 import express from 'express'
 import router from './routes/api';
 import connect from './utils/database';
+import env from './utils/env';
 
 
 export async function init() {
@@ -12,8 +13,8 @@ export async function init() {
         app.use(bodyParser.json());
         app.use('/api', router)
 
-        app.listen(Bun.env.PORT, () => {
-            console.log(Bun.env.PORT)
+        app.listen(env.PORT, () => {
+            console.log(env.PORT)
             console.log(db);
         });
     } catch (error) {
